@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { blogsAPI, mediaAPI } from '../lib/api';
+import { blogsAPI } from '../lib/api';
 import toast from 'react-hot-toast';
-import { Plus, Pencil, Trash2, X, Loader2, Search, Eye, Calendar } from 'lucide-react';
+import { Plus, Pencil, Trash2, X, Loader2, Search, Calendar } from 'lucide-react';
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);

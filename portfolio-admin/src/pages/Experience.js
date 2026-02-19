@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { experienceAPI } from '../lib/api';
 import toast from 'react-hot-toast';
-import { Plus, Pencil, Trash2, X, Loader2, Search, Calendar, Building } from 'lucide-react';
+import { Plus, Pencil, Trash2, X, Loader2 } from 'lucide-react';
 
 const Experience = () => {
   const [experiences, setExperiences] = useState([]);
@@ -52,6 +52,7 @@ const Experience = () => {
     setFormData({ ...formData, [name]: type === 'checkbox' ? checked : value });
   };
 
+  // eslint-disable-next-line no-unused-vars
   const addResp = () => {
     if (respInput.trim()) {
       setFormData({ ...formData, responsibilities: [...formData.responsibilities, respInput.trim()] });

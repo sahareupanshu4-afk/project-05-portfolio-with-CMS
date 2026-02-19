@@ -37,6 +37,7 @@ api.interceptors.response.use(
 );
 
 // Helper to get current session token
+// eslint-disable-next-line no-unused-vars
 const getAuthToken = async () => {
   const { data: { session } } = await supabase.auth.getSession();
   return session?.access_token;
@@ -657,7 +658,7 @@ export const mediaAPI = {
     const folder = formData.get('folder') || 'general';
     const fileName = `${folder}/${Date.now()}_${file.name}`;
     
-    const { data, error } = await supabase.storage
+    const { error } = await supabase.storage
       .from('media')
       .upload(fileName, file);
     
@@ -692,7 +693,7 @@ export const mediaAPI = {
     for (const file of files) {
       const fileName = `${folder}/${Date.now()}_${file.name}`;
       
-      const { data, error } = await supabase.storage
+      const { error } = await supabase.storage
         .from('media')
         .upload(fileName, file);
       

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { contactAPI } from '../lib/api';
 import toast from 'react-hot-toast';
-import { Mail, MailOpen, Clock, Trash2, X, Loader2, Search, Send, Reply } from 'lucide-react';
+import { Mail, MailOpen, Trash2, X, Loader2, Search, Send, Reply } from 'lucide-react';
 import axios from 'axios';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';

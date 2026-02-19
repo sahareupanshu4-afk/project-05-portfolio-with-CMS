@@ -29,6 +29,7 @@ const About = () => {
 
   useEffect(() => {
     fetchAbout();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchAbout = async () => {
