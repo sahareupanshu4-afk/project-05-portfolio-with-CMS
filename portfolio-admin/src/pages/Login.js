@@ -120,6 +120,13 @@ const Login = () => {
           </form>
         </div>
 
+        {/* Demo credentials */}
+        <div className="bg-slate-50 rounded-lg p-3 mt-4 text-center">
+          <p className="text-xs text-slate-500">
+            Demo: <span className="text-slate-700">admin04@gmail.com</span> / <span className="text-slate-700">admin@12</span>
+          </p>
+        </div>
+
         {/* Footer */}
         <p className="text-center text-sm text-slate-500 mt-6">
           Portfolio CMS Admin Panel

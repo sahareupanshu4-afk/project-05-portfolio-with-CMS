@@ -117,15 +117,13 @@ const Layout = () => {
                 <p className="text-xs text-slate-500 truncate">{user?.email}</p>
               </div>
             )}
-            {!collapsed && (
-              <button
-                onClick={handleLogout}
-                className="p-2 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-red-500 transition-colors"
-                title="Logout"
-              >
-                <LogOut className="w-5 h-5" />
-              </button>
-            )}
+            <button
+              onClick={handleLogout}
+              className={`p-2 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-red-500 transition-colors ${collapsed ? 'mt-2' : ''}`}
+              title="Logout"
+            >
+              <LogOut className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </aside>
@@ -152,6 +150,13 @@ const Layout = () => {
           </div>
 
           <div className="flex items-center gap-3">
+            <button
+              onClick={handleLogout}
+              className="lg:hidden p-2 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-red-500 transition-colors"
+              title="Logout"
+            >
+              <LogOut className="w-5 h-5" />
+            </button>
             <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-white text-sm font-semibold lg:hidden">
               {user?.name?.charAt(0) || 'A'}
             </div>
